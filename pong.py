@@ -23,7 +23,7 @@ class Paddle:
     def __init__(self, delta=20):
         self.turtle = turtle.Turtle()
         self.turtle.speed(0)
-        self.step = 20
+        self.step = delta
 
     def draw(self, shape="square", color="white", left=True):
         self.turtle.shape(shape)
@@ -137,7 +137,7 @@ class ScoreBoard:
     def update_board(self):
         self.turtle.clear()
         player_a = f"{self.name_a}: {self.score_a:02}".ljust(20, ' ')
-        player_b = f"{self.name_b}: {self.score_a:02}".rjust(20, ' ')
+        player_b = f"{self.name_b}: {self.score_b:02}".rjust(20, ' ')
         self.turtle.write(f"{player_a} vs {player_b}",
                           align="center", font=("Courier", 24, "normal"))
 
