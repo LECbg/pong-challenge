@@ -182,7 +182,7 @@ class ScoreBoard:
         """Reiniciar los marcadores. Pueden otorgarse puntuaciones específicas."""
         self.score_a = a
         self.score_b = b
-        self.update_score()
+        self.update_board()
 
     def a_gets_point(self):
         """Sumar un punto al jugador A."""
