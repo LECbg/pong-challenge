@@ -21,7 +21,7 @@ paddle_b.link_keys(field, "Up", "Down")
 
 # Add sound to the ball
 ## We need here a Sound object
-## When should it sound?
+## When do you think the ball should make noise?
 
 while True:
     field.update()

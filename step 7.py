@@ -2,7 +2,7 @@ import pong
 
 field = pong.GameField(title="Celti-Pong")
 ## What about the scores??
-## Create a score object using the ScoreBoard class inside pong module
+## Create and show a score object using the ScoreBoard class inside pong module
 
 # Create paddles and ball
 paddle_a = pong.Paddle()
