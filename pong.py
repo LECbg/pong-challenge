@@ -123,7 +123,7 @@ class Ball:
     def bounce_down(self):
         """Hace rebotar la bola con el borde inferior."""
         self.turtle.sety(FIELD_HEIGHT//2-10)
-        self.dy *= -1
+        self.flip_vertically()
 
     def bounce_up(self):
         """Hace rebotar la bola con el borde superior."""
@@ -135,7 +135,7 @@ class Ball:
         """Reinicia el movimiento de la bola desde el centro de la pantalla y
         en sentido horizontal inverso."""
         self.turtle.goto(0, 0)
-        self.dx *= -1
+        self.flip_horizontally()
 
     # Paddle checking
     def touches_paddle(self, paddle) -> bool:
@@ -147,7 +147,7 @@ class Ball:
             return b.xcor() < -(FIELD_WIDTH//2-60) and b.ycor() < p.ycor() + 50 and b.ycor() > p.ycor() - 50
 
         # Right paddle
-        return b.xcor() > FIELD_WIDTH//2-60 and b.ycor() < p.ycor() + 50 and b.ycor() > p.ycor() - 50
+        return b.xcor() > FIELD_WIDTH//2-60 and p.ycor() + 50 > b.ycor() > p.ycor() - 50
 
 
 class ScoreBoard:
